@@ -10,6 +10,10 @@ The Stock Prediction Web App uses Streamlit, yfinance, and Prophet libraries for
 - **Visualization:** View historical data, forecast trends, and component analysis.
 - **Simplified Analysis:** Get insights into future stock price movements.
 
+## Screenshots
+![Screenshot 1](https://raw.githubusercontent.com/Vai-Man/stock_prediction/main/screenshots/00.png)
+
+
 ## Getting Started
 
 1. **Prerequisites:**
