@@ -12,7 +12,9 @@ The Stock Prediction Web App uses Streamlit, yfinance, and Prophet libraries for
 
 ## Screenshots
 ![Screenshot 1](https://raw.githubusercontent.com/Vai-Man/stock_prediction/main/screenshots/00.png)
-
+![Screenshot 2](https://raw.githubusercontent.com/Vai-Man/stock_prediction/main/screenshots/01.png)
+![Screenshot 3](https://raw.githubusercontent.com/Vai-Man/stock_prediction/main/screenshots/02.png)
+![Screenshot 4](https://raw.githubusercontent.com/Vai-Man/stock_prediction/main/screenshots/03.png)
 
 ## Getting Started
 
