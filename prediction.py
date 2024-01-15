@@ -1,7 +1,5 @@
 import streamlit as st
-import numpy as np
 import yfinance as yf
-
 from datetime import date
 from prophet import Prophet
 from prophet.plot import plot_plotly
@@ -10,7 +8,7 @@ from plotly import graph_objs as go
 START = "2017-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
 
-st.title('Stock Prediction')
+st.title('Stock Prediction Web App')
 stocks = st.text_input("Enter stock name")
 n_days = st.number_input('Number of Days of Prediction:', min_value=1, value=30)
 
@@ -25,7 +23,6 @@ def load_data(ticker):
             return None
 
         data.reset_index(inplace=True)
-        data['Date'] = np.array(data['Date'])
 
         return data
     except Exception as e:
@@ -42,7 +39,9 @@ if data is not None:
         fig = go.Figure()
         fig.add_trace(go.Scatter(x=data['Date'], y=data['Open'], name="Stock Open"))
         fig.add_trace(go.Scatter(x=data['Date'], y=data['Close'], name="Stock Close"))
-        fig.layout.update(title_text='Time Series data with Rangeslider', xaxis_rangeslider_visible=True)
+        fig.layout.update(title_text='Time Series Data with Rangeslider', xaxis_rangeslider_visible=True)
+        fig.update_xaxes(title_text='Date')
+        fig.update_yaxes(title_text='Close Price')
         st.plotly_chart(fig)
 
     plot_raw_data()
